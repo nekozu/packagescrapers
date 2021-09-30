@@ -281,7 +281,7 @@ Github
 ```
 
 # Buy Me Coffe For Other API
-You Can BuyMe A Coffe With This [Links](https://ko-fi.com/nekozu)
+You Can Buy Me A Coffe With This [Links](https://ko-fi.com/nekozu)
 
 # License
 MIT
