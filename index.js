@@ -63,7 +63,7 @@ const AXIOS_OPTIONS = {
       for (let i = 0; i < url.length; i++) {
         result[i] = {
           title: title[i],
-          link: 'https://pypi.org/'+url[i]
+          link: 'https://pypi.org'+url[i]
         };
       }
       return(result);
