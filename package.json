@@ -1,6 +1,6 @@
 {
   "name": "packagescrapers",
-  "version": "2.0.7",
+  "version": "2.0.10",
   "description": "Npm Package To Search Package At NPMJS PyPi And Github!",
   "repository": "https://github.com/nekozu/packagesrapers",
   "main": "index.js",
