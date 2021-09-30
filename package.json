@@ -1,0 +1,21 @@
+{
+  "name": "packagescrapers",
+  "version": "2.0.7",
+  "description": "Npm Package To Search Package At NPMJS PyPi And Github!",
+  "repository": "https://github.com/nekozu/packagesrapers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm",
+    "PyPi",
+    "Github"
+  ],
+  "author": "Nekozu",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.4",
+    "cheerio": "^1.0.0-rc.10"
+  }
+}
