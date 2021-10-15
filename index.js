@@ -21,6 +21,8 @@ const AXIOS_OPTIONS = {
       const url = []
       const desc = []
       const update = []
+      const tags = []
+      const tagurl = []
       
     $("._0d2164ff > div > a > h3").each((i, el) => {
         title[i] = $(el).text();
@@ -38,13 +40,23 @@ const AXIOS_OPTIONS = {
         update[i] = $(el).text().trim();
       })
 
+      $("._0d2164ff > ul > li > a").each((i, el) => {
+        tags[i] = $(el).text().trim();
+      })
+
+    $("._0d2164ff > ul > li > a").each((i, el) => {
+        tagurl[i] = $(el).attr("href");
+      })
+
       const result = [];
       for (let i = 0; i < url.length; i++) {
         result[i] = {
           title: title[i],
           link: 'https://npmjs.com'+url[i],
           desc: desc[i],
-          updated: update[i]
+          updated: update[i],
+          tags: tags[i],
+          tagurl: 'https://npmjs.com'+tagurl[i]
         };
       }
       return(result);
