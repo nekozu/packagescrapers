@@ -19,6 +19,8 @@ const AXIOS_OPTIONS = {
      
       const title = []
       const url = []
+      const desc = []
+      const update = []
       
     $("._0d2164ff > div > a > h3").each((i, el) => {
         title[i] = $(el).text();
@@ -28,11 +30,21 @@ const AXIOS_OPTIONS = {
         url[i] = $(el).attr("href");
       });
 
+     $("._0d2164ff > p").each((i, el) => {
+        desc[i] = $(el).text().trim();
+      })
+
+     $("._657f443d").each((i, el) => {
+        update[i] = $(el).text().trim();
+      })
+
       const result = [];
       for (let i = 0; i < url.length; i++) {
         result[i] = {
           title: title[i],
-          link: 'https://npmjs.com'+url[i]
+          link: 'https://npmjs.com'+url[i],
+          desc: desc[i],
+          updated: update[i]
         };
       }
       return(result);
@@ -50,20 +62,38 @@ const AXIOS_OPTIONS = {
      
       const title = []
       const url = []
+      const desc = []
+      const version = []
+      const updated = []
       
     $(".package-snippet__name").each((i, el) => {
-        title[i] = $(el).text();
+        title[i] = $(el).text().trim();
       })
 
      $(".unstyled > li > a").each((i, el) => {
         url[i] = $(el).attr("href");
       });
 
+    $(".package-snippet__description").each((i, el) => {
+        desc[i] = $(el).text().trim();
+      })
+
+    $(".package-snippet__version").each((i, el) => {
+        version[i] = $(el).text().trim();
+    })
+
+    $(".package-snippet__released > time").each((i, el) => {
+        updated[i] = $(el).text().trim();
+    })
+
       const result = [];
       for (let i = 0; i < url.length; i++) {
         result[i] = {
           title: title[i],
-          link: 'https://pypi.org'+url[i]
+          link: 'https://pypi.org'+url[i],
+          desc: desc[i],
+          version: version[i],
+          update: updated[i]
         };
       }
       return(result);
@@ -84,7 +114,7 @@ const AXIOS_OPTIONS = {
       const url = []
       
     $(".d-flex > div > a").each((i, el) => {
-        title[i] = $(el).text();
+        title[i] = $(el).text().trim();
       })
 
      $(".d-flex > div > a").each((i, el) => {
